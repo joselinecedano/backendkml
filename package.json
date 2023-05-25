@@ -1,7 +1,7 @@
 {
   "name": "kissmylashesz-backend",
   "version": "1.0.0",
-  "description": "backend repo for kissmylashesz mern stack application",
+  "description": "backend for kissmylashesz MERN stack application",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Joseline Cedano",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
