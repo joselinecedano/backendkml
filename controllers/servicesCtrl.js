@@ -12,6 +12,17 @@ const getServices = (req, res) => {
     }
    })
 }
+    // * Services Show *
+const showService = (req, res) => {
+   db.Services.findById(req.params.id)
+   .then((foundService) => {
+    if(!foundService){
+        req.status(404).json({message: 'Cannot find Services'})
+    } else {
+        res.status(200).json({data: foundService})
+    }
+   })
+}
     // * Services Create *
 const createServices = (req, res) => {
     db.Services.create(req.body)
@@ -23,8 +34,33 @@ const createServices = (req, res) => {
         }
     })
 }
+    // * Services Update *
+const updateService = (req,res) => {
+    db.Services.findByIdAndUpdate(req.params.id , req.body, {new : true})
+    .then((updatedService) => {
+        if(!updatedService){
+            res.status(400).json({message : 'Could NOT update Service'})
+        } else {
+            res.status(200).json({data : updatedService, message: 'Service Updated'})
+        }
+    }) 
+}
+    // * Service Destroy *
+const deleteService = (req, res) => {
+    db.Services.findByIdAndDelete(req.params.id)
+    .then((deletedService) => {
+        if (!deletedService){
+            res.status(400).json({message: 'Could NOT delete Service'})
+        } else {
+            res.status(200).json({data : deleteService, message : 'Service Deleted'})
+        }
+    })
+}
 
 module.exports = {
     getServices,
-    createServices
+    showService,
+    createServices,
+    updateService,
+    deleteService
 }
