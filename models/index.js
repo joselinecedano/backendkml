@@ -16,5 +16,6 @@ mongoose.connection
 module.exports = {
     Services: require('./services.js'),
     Products: require('./products.js'),
-    Courses: require('./courses.js')
+    Courses: require('./courses.js'),
+    Gallery: require('./gallery.js')
 }
