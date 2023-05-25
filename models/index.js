@@ -14,5 +14,6 @@ mongoose.connection
     .on('error', (error) => console.log(error))
 
 module.exports = {
-    Services: require('./services.js')
+    Services: require('./services.js'),
+    Products: require('./products.js')
 }

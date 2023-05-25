@@ -1,3 +1,4 @@
 module.exports = {
-    servicesCtrl:  require('./servicesCtrl') // *exports all functions/methods inside the controller for us to use elsewhere
+    servicesCtrl:  require('./servicesCtrl.js'), // *exports all functions/methods inside the controller for us to use elsewhere
+    productsCtrl:  require('./productsCtrl.js') 
 }
