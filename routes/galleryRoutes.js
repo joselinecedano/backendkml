@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {galleryCtrl} = require('../controllers')
+const {galleryCtrl} = require('../api')
 
 // * ROUTES  -  METHODS *
 router.get('/', galleryCtrl.getPost)

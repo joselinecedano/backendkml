@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {servicesCtrl} = require('../controllers')
+const {servicesCtrl} = require('../api')
 
 // * ROUTES  -  METHODS *
 router.get('/', servicesCtrl.getServices)
