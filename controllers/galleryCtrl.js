@@ -6,7 +6,7 @@ const db = require('../models')
     db.Gallery.find({})
     .then((foundPosts) => {
      if(!foundPosts){
-         req.status(404).json({message: 'Cannot find Gallery Posts'})
+         res.status(404).json({message: 'Cannot find Gallery Posts'})
      } else {
          res.status(200).json({data: foundPosts})
      }
@@ -17,7 +17,7 @@ const db = require('../models')
     db.Gallery.findById(req.params.id)
     .then((foundPost) => {
      if(!foundPost){
-         req.status(404).json({message: 'Cannot find Gallery Post'})
+         res.status(404).json({message: 'Cannot find Gallery Post'})
      } else {
          res.status(200).json({data: foundPost})
      }

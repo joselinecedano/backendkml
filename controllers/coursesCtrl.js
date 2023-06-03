@@ -6,7 +6,7 @@ const db = require('../models')
     db.Courses.find({})
     .then((foundCourses) => {
      if(!foundCourses){
-         req.status(404).json({message: 'Cannot find Courses'})
+         res.status(404).json({message: 'Cannot find Courses'})
      } else {
          res.status(200).json({data: foundCourses})
      }
@@ -17,7 +17,7 @@ const db = require('../models')
     db.Courses.findById(req.params.id)
     .then((foundCourse) => {
      if(!foundCourse){
-         req.status(404).json({message: 'Cannot find Course'})
+         res.status(404).json({message: 'Cannot find Course'})
      } else {
          res.status(200).json({data: foundCourse})
      }

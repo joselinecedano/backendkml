@@ -6,7 +6,7 @@ const db = require('../models')
     db.Products.find({})
     .then((foundProducts) => {
      if(!foundProducts){
-         req.status(404).json({message: 'Cannot find Products'})
+         res.status(404).json({message: 'Cannot find Products'})
      } else {
          res.status(200).json({data: foundProducts})
      }
@@ -17,7 +17,7 @@ const db = require('../models')
     db.Products.findById(req.params.id)
     .then((foundProduct) => {
      if(!foundProduct){
-         req.status(404).json({message: 'Cannot find Product'})
+         res.status(404).json({message: 'Cannot find Product'})
      } else {
          res.status(200).json({data: foundProduct})
      }

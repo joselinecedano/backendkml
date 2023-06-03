@@ -6,7 +6,7 @@ const getServices = (req, res) => {
    db.Services.find({})
    .then((foundServices) => {
     if(!foundServices){
-        req.status(404).json({message: 'Cannot find Services'})
+        res.status(404).json({message: 'Cannot find Services'})
     } else {
         res.status(200).json({data: foundServices})
     }
@@ -17,7 +17,7 @@ const showService = (req, res) => {
    db.Services.findById(req.params.id)
    .then((foundService) => {
     if(!foundService){
-        req.status(404).json({message: 'Cannot find Services'})
+        res.status(404).json({message: 'Cannot find Services'})
     } else {
         res.status(200).json({data: foundService})
     }
