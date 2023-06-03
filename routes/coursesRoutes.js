@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {coursesCtrl} = require('../api')
+const {coursesCtrl} = require('../controllers')
 
 // * ROUTES  -  METHODS *
 router.get('/', coursesCtrl.getCourses)

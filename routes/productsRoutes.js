@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {productsCtrl} = require('../api')
+const {productsCtrl} = require('../controllers')
 
 // * ROUTES  -  METHODS *
 router.get('/', productsCtrl.getProducts)

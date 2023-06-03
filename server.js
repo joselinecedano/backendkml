@@ -20,6 +20,3 @@ app.use((req, res) => {res.status(404).json({message: "Not a proper route - 404 
 
 // LISTENER
 app.listen(PORT, () => console.log(`Listening to Kiss My Lashesz on PORT ${PORT}`))
-
-//export for vercel
-module.exports = app
