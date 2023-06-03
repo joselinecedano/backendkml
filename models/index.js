@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const {MONGODB_URI} = process.env
+const { MONGODB_URI } = process.env
 
 // * DATABASE CONNECTION *
     // ? Estabish Connection ?
