@@ -5,8 +5,8 @@ const ServicesSchema = new mongoose.Schema({
     image: String,
     description: String,
     price: {type: Number, required: true},
-    miniPrice: {type: Number, required: true},
-    fillPrice: {type: Number, required: true},
+    miniPrice: Number,
+    fillPrice: Number
     
 })
 
